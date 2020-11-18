@@ -157,20 +157,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Python-朝花夕拾(以前没注意的小点)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Python-朝花夕拾-以前没注意的一下小知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/18/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE(%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E5%B0%8F%E7%82%B9)/">Python 朝花夕拾系列(以前没注意的小点)</a>
+      <a class="article-title" href="/2020/11/18/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE-%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%B8%8B%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/">Python 朝花夕拾(以前没注意的一下小知识点)</a>
     </h1>
   
 
         
-        <a href="/2020/11/18/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE(%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E5%B0%8F%E7%82%B9)/" class="archive-article-date">
-  	<time datetime="2020-11-18T13:20:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-18</time>
+        <a href="/2020/11/18/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE-%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%B8%8B%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
+  	<time datetime="2020-11-18T14:19:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-18</time>
 </a>
         
       </header>
@@ -188,7 +188,7 @@
 <h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">c = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line">zipped = <span class="built_in">zip</span>(a,b)</span><br><span class="line">print(zipped)     <span class="comment"># 结果是：[(1, 4), (2, 5), (3, 6)]</span></span><br><span class="line"><span class="built_in">zip</span>(a,c)              <span class="comment"># 元素个数与最短的列表一致</span></span><br><span class="line">print(<span class="built_in">zip</span>)          <span class="comment"># 结果是：[(1, 4), (2, 5), (3, 6)]</span></span><br><span class="line"><span class="built_in">zip</span>(*zipped)          <span class="comment"># 与 zip 相反，*zipped 可理解为解压，返回二维矩阵式</span></span><br><span class="line">print(<span class="built_in">zip</span>)          <span class="comment"># 结果是：[(1, 2, 3), (4, 5, 6)]</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lines = <span class="built_in">list</span>(csv.reader(<span class="built_in">open</span>(<span class="string">&#x27;examples/ex7.csv&#x27;</span>)))</span><br><span class="line">header, values = lines[<span class="number">0</span>], lines[<span class="number">1</span>:]</span><br><span class="line">data_dict = &#123;h: v <span class="keyword">for</span> h, v <span class="keyword">in</span> <span class="built_in">zip</span>(header, <span class="built_in">zip</span>(*values))&#125;</span><br><span class="line">print(*values)</span><br><span class="line">print(<span class="built_in">list</span>(<span class="built_in">zip</span>(*values)))</span><br><span class="line">data_dict</span><br></pre></td></tr></table></figure>
 <h5 id="其他的发现："><a href="#其他的发现：" class="headerlink" title="其他的发现："></a>其他的发现：</h5><blockquote>
-<p>当我使用<em>这个运算符对二维的数组values时候，发现输出了<img src="/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE(%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E5%B0%8F%E7%82%B9)/%E6%8D%95%E8%8E%B7.png" alt="avatar"><br>而原来未加\</em>的输出是<br><img src="/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE(%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E5%B0%8F%E7%82%B9)/%E6%8D%95%E8%8E%B72.png" alt="avatar"><br>所以得出结论，我们的<em>号运算符可以解开中括号，再做一组实验，连续使用两个\</em>号<br><img src="/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE(%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E5%B0%8F%E7%82%B9)/%E6%8D%95%E8%8E%B73.png" alt="avatar"><br>结论，*号可以实现对于一个多demension的数组的降维，但是对于一维列表不可以使用。</p>
+<p>当我使用<em>这个运算符对二维的数组values时候，发现输出了<img src="/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE-%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%B8%8B%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%8D%95%E8%8E%B7.png" alt="avatar"><br>而原来未加\</em>的输出是<br><img src="/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE-%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%B8%8B%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%8D%95%E8%8E%B72.png" alt="avatar"><br>所以得出结论，我们的<em>号运算符可以解开中括号，再做一组实验，连续使用两个\</em>号<br><img src="/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE-%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%B8%8B%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%8D%95%E8%8E%B73.png" alt="avatar"><br>结论，*号可以实现对于一个多demension的数组的降维，但是对于一维列表不可以使用。</p>
 </blockquote>
 <hr>
 
@@ -203,7 +203,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/18/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE(%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E5%B0%8F%E7%82%B9)/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/11/18/Python-%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE-%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%B8%8B%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/">展开全文 >></a>
         </p>
       
 
