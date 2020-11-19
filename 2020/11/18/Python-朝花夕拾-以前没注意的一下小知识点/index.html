@@ -15,15 +15,15 @@
 <meta property="og:site_name" content="Mushroom的博客">
 <meta property="og:description" content="Python zip() 函数 zip() 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表。如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 * 号操作符，可以将元组解压为列表。  语法:zip([iterable,....])^1 返回值： 返回的是元组列表。  实例123456789a &#x3D; [1,2,3]b &#x3D; [4,5,">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://mushroomouou.github.io/mushroomouou.github.io/img/1.png">
-<meta property="og:image" content="http://mushroomouou.github.io/mushroomouou.github.io/img/2.png">
-<meta property="og:image" content="http://mushroomouou.github.io/mushroomouou.github.io/img/3.png">
+<meta property="og:image" content="http://mushroomouou.github.io/mushroomouou.github.io/.io//1.png">
+<meta property="og:image" content="http://mushroomouou.github.io/mushroomouou.github.io/.io//2.png">
+<meta property="og:image" content="http://mushroomouou.github.io/mushroomouou.github.io/.io//3.png">
 <meta property="article:published_time" content="2020-11-18T14:19:06.000Z">
 <meta property="article:modified_time" content="2020-11-18T15:36:59.757Z">
 <meta property="article:author" content="黄星杰">
 <meta property="article:tag" content="Python 数据分析 md">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://mushroomouou.github.io/mushroomouou.github.io/img/1.png">
+<meta name="twitter:image" content="http://mushroomouou.github.io/mushroomouou.github.io/.io//1.png">
   
     <link rel="alternative" href="/atom.xml" title="Mushroom的博客" type="application/atom+xml">
   
@@ -192,7 +192,7 @@
 <h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">c = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line">zipped = <span class="built_in">zip</span>(a,b)</span><br><span class="line">print(zipped)     <span class="comment"># 结果是：[(1, 4), (2, 5), (3, 6)]</span></span><br><span class="line"><span class="built_in">zip</span>(a,c)              <span class="comment"># 元素个数与最短的列表一致</span></span><br><span class="line">print(<span class="built_in">zip</span>)          <span class="comment"># 结果是：[(1, 4), (2, 5), (3, 6)]</span></span><br><span class="line"><span class="built_in">zip</span>(*zipped)          <span class="comment"># 与 zip 相反，*zipped 可理解为解压，返回二维矩阵式</span></span><br><span class="line">print(<span class="built_in">zip</span>)          <span class="comment"># 结果是：[(1, 2, 3), (4, 5, 6)]</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lines = <span class="built_in">list</span>(csv.reader(<span class="built_in">open</span>(<span class="string">&#x27;examples/ex7.csv&#x27;</span>)))</span><br><span class="line">header, values = lines[<span class="number">0</span>], lines[<span class="number">1</span>:]</span><br><span class="line">data_dict = &#123;h: v <span class="keyword">for</span> h, v <span class="keyword">in</span> <span class="built_in">zip</span>(header, <span class="built_in">zip</span>(*values))&#125;</span><br><span class="line">print(*values)</span><br><span class="line">print(<span class="built_in">list</span>(<span class="built_in">zip</span>(*values)))</span><br><span class="line">data_dict</span><br></pre></td></tr></table></figure>
 <h5 id="其他的发现："><a href="#其他的发现：" class="headerlink" title="其他的发现："></a>其他的发现：</h5><blockquote>
-<p>当我使用<em>这个运算符对二维的数组values时候，发现输出了<br><img src="/mushroomouou.github.io/img/1.png"><br>而原来未加\</em>的输出是<br><img src="/mushroomouou.github.io/img/2.png"><br>所以得出结论，我们的<em>号运算符可以解开中括号，再做一组实验，连续使用两个\</em>号<br><img src="/mushroomouou.github.io/img/3.png"><br>结论，*号可以实现对于一个多demension的数组的降维，但是对于一维列表不可以使用。</p>
+<p>当我使用<em>这个运算符对二维的数组values时候，发现输出了<br><img src="/mushroomouou.github.io/.io//1.png"><br>而原来未加\</em>的输出是<br><img src="/mushroomouou.github.io/.io//2.png"><br>所以得出结论，我们的<em>号运算符可以解开中括号，再做一组实验，连续使用两个\</em>号<br><img src="/mushroomouou.github.io/.io//3.png"><br>结论，*号可以实现对于一个多demension的数组的降维，但是对于一维列表不可以使用。</p>
 </blockquote>
 <hr>
 
