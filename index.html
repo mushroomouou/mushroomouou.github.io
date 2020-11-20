@@ -180,75 +180,9 @@
         <h3 id="OS模块"><a href="#OS模块" class="headerlink" title="OS模块"></a>OS模块</h3><blockquote>
 <p>是Python内部自带的一种与操作系统有交互的模块内置了相当多的函数。<br>这些函数对我们建立脚本，自动化办公，等等方面非常有用。学好也是一个刚需。</p>
 </blockquote>
-<h4 id="引例"><a href="#引例" class="headerlink" title="引例"></a>引例</h4><p><img src="https://i.loli.net/2020/11/20/fnlRaDjpTJOohcg.png" alt="捕获.PNG">      </p>
-<ul>
-<li>这是我为了方便开机学习Python而设计的一个简单的有关于OS的一个程序，下面是在cmd运行的效果。<br><img src="https://i.loli.net/2020/11/20/uyigk2Yor9acW73.png" alt="捕获.PNG"><br><img src="https://i.loli.net/2020/11/20/VRCpE97XzTU1WKe.png" alt="捕获.PNG"><br>然后发现网易云打开了<br><img src="https://i.loli.net/2020/11/20/JQ2fanBkmy5GpsO.png" alt="捕获.PNG">      </li>
-<li>其实程序设计的很拉跨，但是却很有效，很使用，不用再使用鼠标去点，然后启动了。其实这也就是我们OS模块的魅力所在。</li>
-</ul>
-<h4 id="OS模块学习"><a href="#OS模块学习" class="headerlink" title="OS模块学习:"></a>OS模块学习:</h4><ul>
-<li><p>os.access(path)</p>
-<ul>
-<li>这个函数可以返回这个文件的一些特性，可读，可写，可执行？，等等一系列的判断，相当于询问文件的属性。</li>
-<li>参数<ul>
-<li>os.F_OK: 作为access()的mode参数，测试path是否存在。</li>
-<li>os.R_OK: 包含在access()的mode参数中 ， 测试path是否可读。</li>
-<li>os.W_OK 包含在access()的mode参数中 ， 测试path是否可写。</li>
-<li>os.X_OK 包含在access()的mode参数中 ，测试path是否可执行。</li>
-<li>etc.</li>
-</ul>
-</li>
-<li>返回值类型:<ul>
-<li>bool类型的返回值，可以返回true，不行返回false<br><img src="https://i.loli.net/2020/11/20/G2dnbVgUCtDTaXW.png" alt="捕获.PNG"><img src="https://i.loli.net/2020/11/20/Ow4Mu35evHgoU18.png" alt="捕获.PNG"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>os.system()</p>
-<ul>
-<li>这个函数非常厉害，输入的是一串字符串，但这个字符串，会被放到终端运行，执行如果报错，返回的信息又会发送给python的解释器，接受到信息，反馈到屏幕上面，输出结果。所以可以想想，我们使用这一条简单的函数做多少事情，再加上终端的指令量的庞大，这个函数自然的为Python与操作系统提供了一个交流的机会。</li>
-<li>例子<ul>
-<li>os.system(“notepad”)</li>
-<li>打开一个空记事本</li>
-<li>os.system(“start pycharm”)</li>
-<li>启动pycharm</li>
-</ul>
-</li>
-<li>好东西不需要介绍，因为用的本来就多。</li>
-</ul>
-</li>
-<li><p>os.chdir(path)</p>
-<ul>
-<li>这个函数存在的价值就在于，其能轻易的切换工作区，在一个程序运行的过程中，对于不同位置的文件的操作必不可少，这个函数可以引导我们的Python程序到指定的文件夹下面运行，从而大大提高效率</li>
-<li>例子<ul>
-<li>os.chdir(“C:/Users/HP2/desktop”)</li>
-<li>这就吧工作区切换到了上面的路径下，简直非常方便。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>os.getcwd()</p>
-<ul>
-<li>返回当前工作区的路径，其实Python中间有很多这样的函数，像是get类的，is类的，其实跟英文有很大联系，基本可以直接领会函数的内涵，是咋设计的，为啥要这么写。</li>
-<li>print(os.getcwd())</li>
-<li>实现路径的打印</li>
-</ul>
-</li>
-<li><p>os.stat(path)</p>
-<ul>
-<li>这个函数同样是一个非常好的函数，实现的功能是，把这个文件的一些特征数据，或着叫做属性返回。</li>
-<li>对于文件详细信息的查看，还是非常有用的。</li>
-</ul>
-</li>
-<li><p>时间戳</p>
-<blockquote>
-<p>　时间戳是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总秒数。</p>
-</blockquote>
-<ul>
-<li>上面的stat函数返回的其实是一个带有时间戳的信息，所以需要去给文本解码，也就是使用Python中的time模块中的localtime()就可以实现时间戳的处理。</li>
-</ul>
-</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2020/11/20/Python-OS-%E6%A8%A1%E5%9D%97/#more">more >></a>
+        
       
 
       
